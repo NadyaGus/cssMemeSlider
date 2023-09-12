@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #dedede;
+  background-color: #191920;
+}
+
+/* Links */
+
+a {
+  color: #dedede;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgb(51, 57, 186);
+}
+
+a:active {
+  color: rgb(98, 103, 181);
+}
+
+/* Header */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem;
+}
+
+/* Slider */
+
+.slider {
+  margin: 0 auto;
+  width: 40rem;
+  overflow: hidden;
+}
+
+.meme-slider {
+  display: flex;
+}
+
+.meme {
+  width: 40rem;
+}
+
+input[name="nav"] {
+  visibility: hidden;
+}
+
+/* Пагинация */
+
+.pagination {
+  display: flex;
+}
+
+label {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(38, 43, 143);
+  border-radius: 50%;
+  border: 0.4rem solid #191920;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+label:hover {
+  background-color: rgb(11, 87, 250);
+  transition: 0.4s;
+}
+
+label:active {
+  background-color: rgb(44, 44, 99);
+  transition: 0.4s;
+}
+
+/* Анимация переключения слайдера */
+
+#btn-1:checked ~ .img-slider .meme-slider {
+  transform: translateX();
+  transition: 0.6s;
+}
+
+#btn-2:checked ~ .img-slider .meme-slider {
+  transform: translateX(-40rem);
+  transition: 0.6s;
+}
+
+#btn-3:checked ~ .img-slider .meme-slider {
+  transform: translateX(-80rem);
+  transition: 0.6s;
+}
+
+#btn-4:checked ~ .img-slider .meme-slider {
+  transform: translateX(-120rem);
+  transition: 0.6s;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 0;
+  }
