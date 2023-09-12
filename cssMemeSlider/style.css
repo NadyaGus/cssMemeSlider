@@ -56,7 +56,7 @@ input[name="nav"] {
   visibility: hidden;
 }
 
-/* Пагинация */
+/* Pagination */
 
 .pagination {
   display: flex;
@@ -83,7 +83,7 @@ label:active {
   transition: 0.4s;
 }
 
-/* Анимация переключения слайдера */
+/* Slider animation */
 
 #btn-1:checked ~ .img-slider .meme-slider {
   transform: translateX();
@@ -105,13 +105,80 @@ label:active {
   transition: 0.6s;
 }
 
+/* Pagination activ  */
+
+#btn-1:checked ~ .info-wrapper .pagination label:nth-child(1) {
+  background-color: #dedede;
+}
+
+#btn-2:checked ~ .info-wrapper .pagination label:nth-child(2) {
+  background-color: #dedede;
+}
+
+#btn-3:checked ~ .info-wrapper .pagination label:nth-child(3) {
+  background-color: #dedede;
+}
+
+#btn-4:checked ~ .info-wrapper .pagination label:nth-child(4) {
+  background-color: #dedede;
+}
+
+/* Descroption info */
+
+.info-wrapper {
+    display: flex;
+    width: 40rem;
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .info-slider {
+    width: 20rem;
+    overflow: hidden;
+  }
+  
+  .info {
+    display: flex;
+    width: 160rem;
+  }
+  
+  .info p {
+    width: 40rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  
+  /* Desc. info animation */
+  
+  #btn-1:checked ~ .info-wrapper .info-slider .info {
+    transform: translateX();
+    transition: 0.6s;
+  }
+  
+  #btn-2:checked ~ .info-wrapper .info-slider .info {
+    transform: translateX(-40rem);
+    transition: 0.6s;
+  }
+  
+  #btn-3:checked ~ .info-wrapper .info-slider .info {
+    transform: translateX(-80rem);
+    transition: 0.6s;
+  }
+  
+  #btn-4:checked ~ .info-wrapper .info-slider .info {
+    transform: translateX(-120rem);
+    transition: 0.6s;
+  }
+  
 
 /* Footer */
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 4rem;
-    padding-top: 6rem;
-    padding-bottom: 0;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 0;
+}
+
